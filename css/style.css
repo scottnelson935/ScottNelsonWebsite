@@ -1,17 +1,135 @@
 * {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background: black;
 }
 
+body {
+  overflow: hidden;
+}
+
 #canvas1 {
-  border: 2px solid white;
+  overflow: hidden;
+  border: 0px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 705px;;
-  height: 396px;
+  width: 100%;
+  height: auto;
 }
 
+#title {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Jura', sans-serif;
+  font-size: 3rem;
+  background: -webkit-linear-gradient(#ffffff, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  z-index: 1;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  #title {
+    font-size: 2.4rem;
+  }
+
+  #navbar {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #title {
+    font-size: 2.2rem;
+  }
+
+  #navbar a {
+    font-size: 5px;
+  }
+}
+
+#navbar {
+  position: absolute;
+  top: 110px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#navbar a {
+  color: #757575;
+  font-family: 'Darker Grotesque', sans-serif;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
+#navbar a:hover {
+  color: #ffffff;
+}
+
+.text {
+  display: block;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 1.5rem;
+  color: rgb(170, 170, 170);
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
+  /* Change 0.5s to the duration you want */
+  position: relative;
+  /* Make the paragraphs overlap so they can fade into each other */
+
+}
+
+.p {
+  display: block;
+  word-wrap: break-word;
+}
+
+#content {
+  width: 300px;
+  height: 300px
+}
+
+#textAbout {
+  top: 200px;
+  left: 40px;
+  width: 300px;
+  height: 300px;
+}
+
+#textMusic {
+  top: 200px;
+  left: 40px;
+  width: 300px;
+  height: 300px;
+}
+
+#textMedia {
+  top: 200px;
+  left: 40px;
+  width: 300px;
+  height: 300px;
+}
+
+#textContact {
+  top: 200px;
+  left: 40px;
+  width: 400px;
+  height: 300px;
+}
