@@ -7,7 +7,7 @@ document.querySelectorAll('#navbar .nav-link').forEach((navLink) => {
   navLink.addEventListener('click', (e) => {
     // e.preventDefault();
 
-    // Hide all text
+    // Hide all blocks
     document.querySelectorAll('.text').forEach((text) => {
       text.style.display = 'none';
       text.style.opacity = '0';
@@ -16,9 +16,17 @@ document.querySelectorAll('#navbar .nav-link').forEach((navLink) => {
     // Show the text that corresponds to the clicked button
     let textId = 'text' + e.target.id;
     let selectedText = document.getElementById(textId);
-    selectedText.style.display = 'block';
-    setTimeout(() => { // Timeout for smooth transition
-      document.getElementById(textId).style.opacity = '1';
-    }, 50);
+
+    if (textId !== 'textArt') {
+      selectedText.style.display = 'block';
+      setTimeout(() => { // Timeout for smooth transition
+        document.getElementById(textId).style.opacity = '1';
+      }, 50);
+    } else {
+      selectedText.style.display = 'grid';
+      setTimeout(() => { // Timeout for smooth transition
+        document.getElementById(textId).style.opacity = '1';
+      }, 50);
+    }
   });
 });
