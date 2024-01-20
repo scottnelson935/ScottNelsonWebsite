@@ -27,6 +27,8 @@
 <body>
   <div id="title"><a href="/">Scott Nelson</a></div>
 
+  
+
   <div id="socials">
     <a href="https://www.instagram.com/skwampus/" target="_blank">
       <img src="art/ig_gradient.svg" alt="Instagram">
@@ -45,9 +47,19 @@
   <nav id="navbar">
     <a href="#about" id="About" class="nav-link">About</a>
     <a href="#CV" id="CV" class="nav-link">CV</a>
-    <a href="#art" id="Art" class="nav-link">Art</a>
+    <a href="#art" id="Art" class="nav-link">Intermedia Works</a>
     <a href="#contact" id="Contact" class="nav-link">Contact</a>
   </nav>
+
+  <div id="carouselContainer">
+    <div id="imageCarousel">
+      <div class="carousel-content">
+        <!-- <h2>Image 1</h2>
+        <p>Description for Image 1</p> -->
+      </div>
+    </div>
+  </div>
+
   <div class="content-wrapper">
     <div id="content">
       <p id="textAbout" class="text">Scott Nelson is an Intermedia
@@ -59,7 +71,7 @@
         role in the creation of the art.</p>
       <p id="textCV" class="text">
         <a href="fullcv.html" id="fullCV" target="_blank">LINK TO FULL CV</a><br><br>
-      <U>EDUCATION</U><br>
+        <U>EDUCATION</U><br>
         Louisiana State University 2020-Expected Summer 2024<br>
         Ph.D. candidate, Experimental Music and Digital Media<br>Digital Art minor<br>
         <br>
@@ -71,7 +83,8 @@
         <br>
         <U>INSTRUCTION & TEACHER TRAINING</U><br>
         PROGRAMMING DIGITAL MEDIA<br>
-        Course introduces real-time 2D graphics, and digital signal processing for audio using JavaScript and JavaScript library extensions,
+        Course introduces real-time 2D graphics, and digital signal processing for audio using JavaScript and JavaScript
+        library extensions,
         p5.js, p5.play, and Tone.js. Ultimately this is all integrated with Arduino hardware microcontrollers<br>
         <br>LSU STEM Pathways 2023 Summer Institute<br>
         Summer 2023<br>
@@ -84,7 +97,7 @@
         Denham Springs High School STEM and Robotics Center<br>
         Fall 2023 - Spring 2024<br>
         <br>
-        
+
         SOUND DESIGN<br>
         LSU Dual Enrollment course | MUS 2745 Intro. to Computer Music<br>
         Denham Springs High School STEM and Robotics Center<br>
@@ -136,39 +149,46 @@
       </p>
       <div id="textArt" class="text">
 
-        <div class="art-tile">
-          <img src="art/cliffhangerLogo.png" alt="Artwork 1">
-          <p>Description of<wbr> <span class="no-wrap">Artwork 1</span></p>
+        <div class="art-tile" onclick="openLink('https://play.unity.com/mg/other/build-jgp-1')"
+          onmouseover="showTooltip(this, 'https://play.unity.com/mg/other/build-jgp-1')">
+          <img src="art/nurseWretched_square.png" alt="Preview image of Nurse Wretched title screen">
+          <p><i>Nurse Wretched</i><wbr> <span class="no-wrap">Playable 3D-game </span><wbr><span
+              class="no-wrap">in-browser (2022—mobile <wbr>not supported)</span> </p>
         </div>
 
 
-        <div class="art-tile">
-          <!-- <img src="art/guitar.png" alt="Artwork 2"> -->
-          <a href="https://youtu.be/kboxrKm2AZg?si=z48wBI9PTOTfUMs4" target="_blank">
-            <img src="https://i.ytimg.com/vi/kboxrKm2AZg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCOmoZzQjtnoPxtzj0XTIrx7w2gbw" alt="Video Preview">
-            <p>Beyond Christianity<wbr> <span class="no-wrap">Ecumenicism in Bernstein's Mass</span></p>
-          </a>
+        <div class="art-tile" onclick="openLink('https://youtu.be/kboxrKm2AZg?si=O42ZMqy4vf8BvIVz')"
+          onmouseover="showTooltip(this, 'https://youtu.be/kboxrKm2AZg?si=O42ZMqy4vf8BvIVz')">
+          <img src="art/BeyondChristianity_EiBM.jpg"
+            alt="Preview imagge of documentary Beyond Christianity: Ecumenicism in Bernstein's Mass">
+          <p>Documentary<wbr> <span class="no-wrap">about religious <wbr>themes in </span>Bernstein's <wbr><span
+              class="no-wrap"></span><i>Mass</i> (2022)</span></p>
         </div>
 
-        <div class="art-tile">
-          <img src="art/goldenLeavesTop.jpeg" alt="Artwork 3">
-          <p>Description of<wbr> <span class="no-wrap">Artwork 3</span></p>
+        <div class="art-tile" onclick="openLink('https://youtu.be/7CE41sZK0yE?si=YMP2vXx-LTOuoMvf')"
+          onmouseover="showTooltip(this, 'https://youtu.be/7CE41sZK0yE?si=YMP2vXx-LTOuoMvf')">
+          <img src="art/CDLT.jpeg" alt="Preview image of Cross-Dimensional Lung Transplant">
+          <p><i>Cross-Dimensional</i><wbr> <span class="no-wrap"><i>Lung Transplant </i></span>(2021)</p>
         </div>
 
-        <div class="art-tile">
-          <img src="art/cliffhangerLogo.png" alt="Artwork 4">
-          <p>Description of<wbr> <span class="no-wrap">Artwork 4</span></p>
+        <div class="art-tile" onclick="openLink('https://youtu.be/c7rEEuQo-es?si=avceOkO-sKqafU9Q&t=1776')"
+          onmouseover="showTooltip(this, 'https://youtu.be/c7rEEuQo-es?si=avceOkO-sKqafU9Q&t=1776')">
+          <img src="art/CtaUU.jpeg" alt="Preview image of Master's lecture recital: Capitulation to an Unholy Union">
+          <p>Video of Master's<wbr> <span class="no-wrap">lecture recital </span>(2020)</p>
         </div>
 
 
-        <div class="art-tile">
-          <img src="art/guitar.png" alt="Artwork 5">
-          <p>Description of<wbr> <span class="no-wrap">Artwork 5</span></p>
+        <div class="art-tile" onclick="openLink('https://youtu.be/78jb7OvplUI?si=7JhlT4sQdOP4HPc2')"
+          onmouseover="showTooltip(this, 'https://youtu.be/78jb7OvplUI?si=7JhlT4sQdOP4HPc2')">
+          <img src="art/WWaWotIE.gif" alt="Preview image of Water, Wood, and Whipserings of the Inviolable Entity">
+          <p><i>Water, Wood, and<wbr> <span class="no-wrap">Whisperings of the </span><wbr><span
+                clas="no-wrap">Inviolable Entity </span></i>(2016)</p>
         </div>
 
-        <div class="art-tile">
-          <img src="art/goldenLeavesTop.jpeg" alt="Artwork 6">
-          <p>Description of<wbr> <span class="no-wrap">Artwork 6</span></p>
+        <div class="art-tile" onclick="openLink('https://scottnelson935.github.io/LuminousLarceny/')"
+          onmouseover="showTooltip(this, 'https://scottnelson935.github.io/LuminousLarceny/')">
+          <img src="art/LL.jpg" alt="Artwork 6">
+          <p>Playable 2-person<wbr> <span class="no-wrap">browser game </span><wbr>(2024—mobile <wbr>not supported)</p>
         </div>
       </div>
       <p id="textContact" class="text"><a href="mailto:scottnelson935@gmail.com">Music inquiries</a><br><a
