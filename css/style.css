@@ -432,10 +432,18 @@ iframe {
 }
 
 #imageCarousel {
+  display: flex;
   background-size: cover;
   background-position: center center;
+  flex-direction: column;
+  justify-content: flex-end;
   z-index: 2;
   position: relative;
   border: solid rgb(161, 161, 161) 1px;
   /* Your other styles */
+}
+
+#caption {
+  margin-bottom: -2.8rem;
+  font-size: 1.1rem;
 }
